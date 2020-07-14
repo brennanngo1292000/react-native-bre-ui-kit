@@ -4,7 +4,9 @@
   "description": "The missing React Native Bre UI Kit by brennan ngo",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/**.js",
+    "test": "jest",
+    "postinstall": "opencollective-postinstall"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,25 @@
     "react-native-bre",
     "react-native-bre-ui-kit"
   ],
+  "dependencies": {
+    "opencollective-postinstall": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-universe": "^1.0.7",
+    "prettier": "^1.15.1",
+    "prop-types": "^15.6.2",
+    "react": "16.8.3",
+    "react-native": "^0.59",
+    "react-native-vector-icons": "^6.5.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-vector-icons": ">6.0.0"
+  },
   "author": "brennanngo",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/brennanngo1292000/react-native-bre-ui-kit/issues"
   },
