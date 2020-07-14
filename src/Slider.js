@@ -14,6 +14,7 @@ const Slider = props => {
     theme,
     styles,
     step,
+    value,
   } = props;
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
   const [trackSize, setTrackSize] = useState({ width: 0, height: 0 });
@@ -85,20 +86,21 @@ const Slider = props => {
     _handleMeasure('thumbSize', x);
   };
   // calculate all of them
+  let current = {};
 
   const _handleMeasure = (name, x) => {
     const { width, height } = x.nativeEvent.layout;
     const size = { width, height };
     const storeName = `_${name}`;
-    const currentSize = Slider[storeName];
+    const currentSize = current[storeName];
     if (currentSize && width === currentSize.width && height === currentSize.height) {
       return;
     }
-    [storeName] = size; // initialize a new var with the current sizes
-    if (Slider._containerSize && Slider._trackSize && Slider._thumbSize) {
-      setContainerSize(Slider._containerSize);
-      setTrackSize(Slider._trackSize);
-      setThumbSize(Slider._thumbSize);
+    current[storeName] = size; // initialize a new var with the current sizes
+    if (current._containerSize && current._trackSize && current._thumbSize) {
+      setContainerSize(current._containerSize);
+      setTrackSize(current._trackSize);
+      setThumbSize(current._thumbSize);
       setMeasured(true);
     }
   };

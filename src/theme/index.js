@@ -1,4 +1,4 @@
-import React, { useContext, createContext, forwardedRef } from 'react';
+import React, { useContext, createContext, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 import BREKIT_COLORS from './colors';
@@ -24,7 +24,7 @@ export const useBrekitTheme = () => {
 };
 
 export const withBrekit = (Component, styles) =>
-  forwardedRef((props, ref) => {
+  forwardRef((props, ref) => {
     return (
       <BrekitContext.Consumer>
         {theme => (
@@ -39,7 +39,7 @@ export const withBrekit = (Component, styles) =>
     );
   });
 
-export const BrekitProvider = (props) => {
+export const BrekitProvider = props => {
   const { theme, children } = props;
   const { COLORS: CUSTOM_COLORS, SIZES: CUSTOM_SIZES, customTheme } = theme;
 

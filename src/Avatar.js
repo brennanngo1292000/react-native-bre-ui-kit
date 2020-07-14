@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
-import { withBrekit} from 'theme';
+import { withBrekit } from './theme';
 
 const Avatar = (props) => {
   const {

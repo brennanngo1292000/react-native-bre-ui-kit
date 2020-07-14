@@ -3,7 +3,7 @@ import { Switch as Switcher } from 'react-native';
 import PropTypes from 'prop-types';
 import BrekitTheme, { withBrekit } from './theme';
 
-const Switch = (props) => {
+const Switch = props => {
   const {
     initialValue,
     onChange,
@@ -17,7 +17,7 @@ const Switch = (props) => {
   const onPressSwitch = () => {
     setSwitchValue(!switchValue);
     return null;
-  }
+  };
 
   // trackColor.true = color === 'primary' ? BrekitTheme.COLORS.PRIMARY : color;
 
@@ -27,14 +27,12 @@ const Switch = (props) => {
       trackColor={{ ...trackColor }}
       ios_backgroundColor={trackColor.false || ios_backgroundColor}
       value={switchValue}
-      onValueChange={() => {
-        onPressSwitch();
-      }}
-      onChange={() => onChange()}
+      onValueChange={onPressSwitch}
+      onChange={onChange}
       {...rest}
     />
   );
-}
+};
 
 Switch.defaultProps = {
   color: BrekitTheme.COLORS.PRIMARY,
@@ -55,7 +53,7 @@ Switch.propTypes = {
   ]),
   disabled: PropTypes.bool,
   initialValue: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func,
 };
 
 export default withBrekit(Switch);

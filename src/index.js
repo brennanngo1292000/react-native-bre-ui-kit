@@ -1,4 +1,5 @@
 import Accordion from './Accordion';
+import Avatar from './Avatar';
 import Block from './Block';
 import Button from './atomic/atoms/Button';
 import Card from './Card';
@@ -23,6 +24,7 @@ const BrekitFont = require('./fonts/brekit.ttf');
 
 export {
   Accordion,
+  Avatar,
   Block,
   Button,
   Card,

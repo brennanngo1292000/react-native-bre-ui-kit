@@ -27,7 +27,6 @@ const Card = props => {
     title,
     titleColor,
     theme,
-    ...props
   } = props;
   const renderImage = () => {
     if (!image) return null;

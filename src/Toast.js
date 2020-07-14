@@ -72,11 +72,13 @@ const Toast = props => {
       animation = Animated.timing(fadeAnim, {
         toValue: 1,
         duration: fadeInDuration,
+        useNativeDriver:true,
       }).start();
     } else {
       animation = Animated.timing(fadeAnim, {
         toValue: 0,
         duration: fadeOutDuration,
+        useNativeDriver:true,
       }).start();
 
       visibilityTimeout = setTimeout(() => {

@@ -135,17 +135,17 @@ const AccordionItem = props => {
 };
 
 AccordionItem.propTypes = {
-  expanded,
-    expandedIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-    headerStyle: ViewPropTypes.style,
-    contentStyle: PropTypes.object,
-    icon:  PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
-    index: PropTypes.any,
-    item: PropTypes.object,
-    onAccordionClose: PropTypes.func,
-    onAccordionOpen: PropTypes.func,
-    setSelected:PropTypes.func,
-}
+  expanded: PropTypes.bool,
+  expandedIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  headerStyle: ViewPropTypes.style,
+  contentStyle: PropTypes.object,
+  icon: PropTypes.oneOfType([PropTypes.node, PropTypes.element]),
+  index: PropTypes.any,
+  item: PropTypes.object,
+  onAccordionClose: PropTypes.func,
+  onAccordionOpen: PropTypes.func,
+  setSelected: PropTypes.func,
+};
 
 const Accordion = props => {
   const {
