@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import BrekitTheme, { withBrekit } from '../../theme';
 import getIconType from '../../helpers/getIconType';
-import galioConfig from '../../config/brekit.json';
+import galioConfig from '../../config/Brekit.json';
 
-const Brekit = createIconSetFromIcoMoon(galioConfig, 'Brekit', './fonts/brekit.ttf');
+const Brekit = createIconSetFromIcoMoon(galioConfig, 'Brekit', './fonts/Brekit.ttf');
 
 const Icon = (props) => {
   const { name, family, size, color, styles, theme, medium, large, ...rest } = props;
