@@ -19,9 +19,9 @@ import DragFlatList from './DragFlatList';
 
 import theme, { withBrekit, BrekitProvider, useBrekitTheme } from './theme';
 
-import brekitConfig from './config/brekit.json';
+import BrekitConfig from './config/Brekit.json';
 
-const BrekitFont = require('./fonts/brekit.ttf');
+const BrekitFont = require('./fonts/Brekit.ttf');
 
 export {
   Accordion,
@@ -44,7 +44,7 @@ export {
   withBrekit,
   BrekitProvider,
   useBrekitTheme,
-  brekitConfig,
+  BrekitConfig,
   BrekitFont,
   DragFlatList,
 };
