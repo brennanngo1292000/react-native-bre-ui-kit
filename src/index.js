@@ -14,7 +14,6 @@ import Switch from './Switch';
 import Text from './atomic/ions/Text';
 import Toast from './Toast';
 import Link from './atomic/atoms/Link';
-import DragFlatList from './DragFlatList';
 
 
 import theme, { withBrekit, BrekitProvider, useBrekitTheme } from './theme';
@@ -46,5 +45,4 @@ export {
   useBrekitTheme,
   BrekitConfig,
   BrekitFont,
-  DragFlatList,
 };

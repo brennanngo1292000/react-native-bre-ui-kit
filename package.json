@@ -1,6 +1,6 @@
 {
   "name": "react-native-bre-ui-kit",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "description": "The missing React Native Bre UI Kit by brennan ngo",
   "main": "src/index.js",
   "scripts": {
